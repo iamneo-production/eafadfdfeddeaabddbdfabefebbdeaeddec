@@ -1,0 +1,158 @@
+package Utility;
+
+class StringAdvanceMethod {
+    private String input1;
+    private String input2;
+
+    public String getInput1() {
+        return input1;
+    }
+
+    public void setInput1(String input1) {
+        this.input1 = input1;
+    }
+
+    public String getInput2() {
+        return input2;
+    }
+
+    public void setInput2(String input2) {
+        this.input2 = input2;
+    }
+
+    public String concatenateStrings() {
+        return input1 + input2;
+    }
+
+    public String[] splitStrings() {
+        return input1.split(input2);
+    }
+
+    public String findFirstCharacter() {
+        if (input1.length() > 0) {
+            return Character.toString(input1.charAt(0));
+        }
+        return "";
+    }
+
+    public int findIndexOfString() {
+        return input1.indexOf(input2);
+    }
+
+    public String trimString() {
+        return input1.trim();
+    }
+}
+
+class StringMethod {
+    private String input;
+
+    public String getInput() {
+        return input;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    public String convertToLowercase() {
+        return input.toLowerCase();
+    }
+
+    public String convertToUppercase() {
+        return input.toUpperCase();
+    }
+
+    public String findFirstCharacter() {
+        if (input.length() > 0) {
+            return Character.toString(input.charAt(0));
+        }
+        return "";
+    }
+
+    public int getStringLength() {
+        return input.length();
+    }
+
+    public String trimString() {
+        return input.trim();
+    }
+}
+
+class StringBoolean {
+    private String input1;
+    private String input2;
+
+    public String getInput1() {
+        return input1;
+    }
+
+    public void setInput1(String input1) {
+        this.input1 = input1;
+    }
+
+    public String getInput2() {
+        return input2;
+    }
+
+    public void setInput2(String input2) {
+        this.input2 = input2;
+    }
+
+    public boolean containsString() {
+        return input1.contains(input2);
+    }
+
+    public boolean startsWithLetter(char letter) {
+        return input1.startsWith(String.valueOf(letter));
+    }
+
+    public boolean endsWithLetter(char letter) {
+        return input1.endsWith(String.valueOf(letter));
+    }
+
+    public boolean areStringsEqual() {
+        return input1.equals(input2);
+    }
+
+    public boolean areStringsEqualIgnoreCase() {
+        return input1.equalsIgnoreCase(input2);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Test StringAdvanceMethod
+        StringAdvanceMethod stringAdvance = new StringAdvanceMethod();
+        stringAdvance.setInput1("Hello");
+        stringAdvance.setInput2("World");
+
+        System.out.println("Concatenated String: " + stringAdvance.concatenateStrings());
+        String[] splitStrings = stringAdvance.splitStrings();
+        System.out.println("Split Strings: " + splitStrings[0] + ", " + splitStrings[1]);
+        System.out.println("First Character: " + stringAdvance.findFirstCharacter());
+        System.out.println("Index of 'World': " + stringAdvance.findIndexOfString());
+        System.out.println("Trimmed String: " + stringAdvance.trimString());
+
+        // Test StringMethod
+        StringMethod stringMethod = new StringMethod();
+        stringMethod.setInput("  Java Programming  ");
+
+        System.out.println("Lowercase: " + stringMethod.convertToLowercase());
+        System.out.println("Uppercase: " + stringMethod.convertToUppercase());
+        System.out.println("First Character: " + stringMethod.findFirstCharacter());
+        System.out.println("String Length: " + stringMethod.getStringLength());
+        System.out.println("Trimmed String: " + stringMethod.trimString());
+
+        // Test StringBoolean
+        StringBoolean stringBoolean = new StringBoolean();
+        stringBoolean.setInput1("Hello, World");
+        stringBoolean.setInput2("Hello");
+
+        System.out.println("Contains 'Hello': " + stringBoolean.containsString());
+        System.out.println("Starts with 'H': " + stringBoolean.startsWithLetter('H'));
+        System.out.println("Ends with 'o': " + stringBoolean.endsWithLetter('o'));
+        System.out.println("Strings are Equal: " + stringBoolean.areStringsEqual());
+        System.out.println("Strings are Equal (Ignoring Case): " + stringBoolean.areStringsEqualIgnoreCase());
+    }
+}
