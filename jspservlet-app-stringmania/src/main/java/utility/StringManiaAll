@@ -122,7 +122,7 @@ class StringBoolean {
 
 public class Main {
     public static void main(String[] args) {
-        // Test StringAdvanceMethod
+        
         StringAdvanceMethod stringAdvance = new StringAdvanceMethod();
         stringAdvance.setInput1("Hello");
         stringAdvance.setInput2("World");
@@ -134,7 +134,7 @@ public class Main {
         System.out.println("Index of 'World': " + stringAdvance.findIndexOfString());
         System.out.println("Trimmed String: " + stringAdvance.trimString());
 
-        // Test StringMethod
+    
         StringMethod stringMethod = new StringMethod();
         stringMethod.setInput("  Java Programming  ");
 
@@ -144,7 +144,7 @@ public class Main {
         System.out.println("String Length: " + stringMethod.getStringLength());
         System.out.println("Trimmed String: " + stringMethod.trimString());
 
-        // Test StringBoolean
+        
         StringBoolean stringBoolean = new StringBoolean();
         stringBoolean.setInput1("Hello, World");
         stringBoolean.setInput2("Hello");
